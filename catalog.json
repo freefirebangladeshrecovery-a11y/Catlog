@@ -1,204 +1,64 @@
 {
-  "name": "Movie & Animation Sources Catalog",
-  "version": 2,
-  "note": "Only legal sources: public domain, Creative Commons, or official free APIs. Verify each endpoint before use.",
-  "sources": [
+  "items": [
     {
-      "name": "Internet Archive - Feature Films (public domain)",
-      "type": "video",
-      "kind": "archive",
-      "endpoint": "https://archive.org/advancedsearch.php?q=collection:feature_films&fl[]=identifier&fl[]=title&fl[]=year&rows=50&output=json",
-      "metadata_endpoint": "https://archive.org/metadata/{identifier}",
-      "play_url_pattern": "https://archive.org/download/{identifier}/{filename}.mp4",
-      "api_key": false
-    },
-    {
-      "name": "Internet Archive - Animation & Cartoons",
-      "type": "video",
-      "kind": "archive",
-      "endpoint": "https://archive.org/advancedsearch.php?q=collection:animationandcartoons&fl[]=identifier&fl[]=title&fl[]=year&rows=50&output=json",
-      "metadata_endpoint": "https://archive.org/metadata/{identifier}",
-      "play_url_pattern": "https://archive.org/download/{identifier}/{filename}.mp4",
-      "api_key": false
-    },
-    {
-      "name": "TMDB (metadata, posters, YouTube trailer IDs)",
-      "type": "metadata",
-      "kind": "tmdb",
-      "endpoint": "https://api.themoviedb.org/3",
-      "api_key": true,
-      "docs": "https://developer.themoviedb.org/reference/intro/getting-started"
-    },
-    {
-      "name": "OMDb (metadata, ratings, posters)",
-      "type": "metadata",
-      "kind": "omdb",
-      "endpoint": "https://www.omdbapi.com",
-      "api_key": true,
-      "docs": "https://www.omdbapi.com/apikey.aspx"
-    },
-    {
-      "name": "Jikan (MyAnimeList anime data)",
-      "type": "metadata",
-      "kind": "jikan",
-      "endpoint": "https://api.jikan.moe/v4",
-      "api_key": false,
-      "docs": "https://docs.api.jikan.moe"
-    },
-    {
-      "name": "AniList (anime GraphQL)",
-      "type": "metadata",
-      "kind": "anilist",
-      "endpoint": "https://graphql.anilist.co",
-      "api_key": false,
-      "docs": "https://docs.anilist.co"
-    },
-    {
-      "name": "TVmaze (TV shows metadata)",
-      "type": "metadata",
-      "kind": "tvmaze",
-      "endpoint": "https://api.tvmaze.com",
-      "api_key": false,
-      "docs": "https://www.tvmaze.com/api"
-    },
-    {
-      "name": "jsonmc (movies & actors JSON by release year)",
-      "type": "dataset",
-      "kind": "github_json",
-      "repo": "https://github.com/AHKol/jsonmc",
-      "raw_pattern": "https://raw.githubusercontent.com/AHKol/jsonmc/main/<file>.json",
-      "api_key": false
-    },
-    {
-      "name": "Simatwa movies-dataset (CSV by genre)",
-      "type": "dataset",
-      "kind": "github_csv",
-      "repo": "https://github.com/Simatwa/movies-dataset",
-      "raw_pattern": "https://raw.githubusercontent.com/Simatwa/movies-dataset/main/data/{genre}.csv",
-      "note": "CSV, convert to JSON before importing",
-      "api_key": false
-    },
-    {
-      "name": "public-domain-free-imdb (legally free movie list)",
-      "type": "dataset",
-      "kind": "github_json",
-      "repo": "https://github.com/petterreinholdtsen/public-domain-free-imdb",
-      "api_key": false
-    },
-    {
-      "name": "Kitsu (anime/manga metadata)",
-      "type": "metadata",
-      "kind": "kitsu",
-      "endpoint": "https://kitsu.io/api/edge",
-      "api_key": false,
-      "docs": "https://kitsu.docs.apiary.io",
-      "note": "Listed in public-api GitHub lists; verify endpoint is still current"
-    },
-    {
-      "name": "Studio Ghibli API (films JSON)",
-      "type": "metadata",
-      "kind": "ghibli",
-      "endpoint": "https://ghibliapi.vercel.app/films",
-      "api_key": false,
-      "note": "Listed in public-apis GitHub list; verify endpoint"
-    },
-    {
-      "name": "Trace.moe (find anime from screenshot)",
-      "type": "tool",
-      "kind": "tracemoe",
-      "endpoint": "https://api.trace.moe",
-      "api_key": false,
-      "docs": "https://soruly.github.io/trace.moe-api"
-    },
-    {
-      "name": "Shikimori (anime database)",
-      "type": "metadata",
-      "kind": "shikimori",
-      "endpoint": "https://shikimori.one/api",
-      "api_key": false,
-      "note": "OAuth needed for user features"
-    },
-    {
-      "name": "Simkl (movies, TV, anime data)",
-      "type": "metadata",
-      "kind": "simkl",
-      "endpoint": "https://api.simkl.com",
-      "api_key": true,
-      "docs": "https://simkl.docs.apiary.io"
-    },
-    {
-      "name": "Watchmode (where to stream legally)",
-      "type": "metadata",
-      "kind": "watchmode",
-      "endpoint": "https://api.watchmode.com/v1",
-      "api_key": true,
-      "docs": "https://api.watchmode.com"
-    },
-    {
-      "name": "Trakt (what people watch, lists)",
-      "type": "metadata",
-      "kind": "trakt",
-      "endpoint": "https://api.trakt.tv",
-      "api_key": true,
-      "docs": "https://trakt.docs.apiary.io"
-    }
-  ],
-  "free_animation_movies": [
-    {
+      "id": 1,
       "title": "Big Buck Bunny",
-      "license": "CC BY 3.0",
-      "page": "https://peach.blender.org"
+      "name": "Big Buck Bunny",
+      "type": "movie",
+      "year": 2008,
+      "genre": "Animation",
+      "description": "A giant rabbit takes revenge on three bullying rodents.",
+      "poster": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+      "poster_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+      "thumbnail": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg",
+      "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "license": "Creative Commons (Blender Foundation)"
     },
     {
-      "title": "Sintel",
-      "license": "CC BY 3.0",
-      "page": "https://durian.blender.org"
-    },
-    {
-      "title": "Tears of Steel",
-      "license": "CC BY 3.0",
-      "page": "https://mango.blender.org"
-    },
-    {
+      "id": 2,
       "title": "Elephants Dream",
-      "license": "CC BY 2.5",
-      "page": "https://orange.blender.org"
+      "name": "Elephants Dream",
+      "type": "movie",
+      "year": 2006,
+      "genre": "Animation",
+      "description": "Two strange characters explore a surreal mechanical world.",
+      "poster": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+      "poster_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+      "thumbnail": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg",
+      "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "license": "Creative Commons (Blender Foundation)"
+    },
+    {
+      "id": 3,
+      "title": "Sintel",
+      "name": "Sintel",
+      "type": "movie",
+      "year": 2010,
+      "genre": "Animation",
+      "description": "A girl searches for her baby dragon in a dangerous world.",
+      "poster": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+      "poster_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+      "thumbnail": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/Sintel.jpg",
+      "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+      "license": "Creative Commons (Blender Foundation)"
+    },
+    {
+      "id": 4,
+      "title": "Tears of Steel",
+      "name": "Tears of Steel",
+      "type": "movie",
+      "year": 2012,
+      "genre": "Sci-Fi",
+      "description": "Sci-fi short about a team trying to save the world from robots.",
+      "poster": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
+      "poster_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
+      "thumbnail": "https://storage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg",
+      "video_url": "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "url": "https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "license": "Creative Commons (Blender Foundation)"
     }
-  ],
-  "github_api_lists": [
-    {
-      "name": "public-api-lists/public-api-lists",
-      "url": "https://github.com/public-api-lists/public-api-lists",
-      "note": "730+ APIs, has its own JSON API"
-    },
-    {
-      "name": "n0shake/Public-APIs",
-      "url": "https://github.com/n0shake/Public-APIs"
-    },
-    {
-      "name": "free-public-apis/apis",
-      "url": "https://github.com/free-public-apis/apis"
-    },
-    {
-      "name": "marcelscruz/public-apis (fork: diit/public-apis-1)",
-      "url": "https://github.com/diit/public-apis-1"
-    },
-    {
-      "name": "Munna-Scriptz/free-anime-apis",
-      "url": "https://github.com/Munna-Scriptz/free-anime-apis"
-    },
-    {
-      "name": "api-evangelist/tmdb",
-      "url": "https://github.com/api-evangelist/tmdb"
-    },
-    {
-      "name": "api-evangelist/omdb",
-      "url": "https://github.com/api-evangelist/omdb"
-    },
-    {
-      "name": "GitHub topic: free-apis",
-      "url": "https://github.com/topics/free-apis"
-    }
-  ],
-  "skipped": "Streaming scrapers (e.g. Gogoanime/Zoro-based APIs) and pirate sites are excluded: copyright violation and malware risk."
+  ]
 }
